@@ -1,0 +1,589 @@
+{
+	"info": {
+		"_postman_id": "abf6afd6-c461-43c9-8eae-d7ed9dee2f83",
+		"name": "desafio_APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17551152"
+	},
+	"item": [
+		{
+			"name": "Tela",
+			"item": [
+				{
+					"name": "TELA CRIAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Pagina inicial\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/criar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TELA UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Pagina\"\n}\n\n// como só tem 1 input fica facil\n// {\n//     \"nome\" : \"Pagina inicial\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/atualiza/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"atualiza",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR TELAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/listarTodos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETAR TELAS",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/delete/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD Permissoes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tela_id\" : 1,\n    \"permission_id\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/AdicionarPermisaoTela",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"AdicionarPermisaoTela"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permissoes Telas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/tela/ListarPermissoesTelas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"tela",
+								"ListarPermissoesTelas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permissao",
+			"item": [
+				{
+					"name": "PermissaoAdicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roles\" : \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permissao/criar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permissao",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PermissaoRemove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permissao/delete/ADMIN",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permissao",
+								"delete",
+								"ADMIN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PermissaoUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roles\" : \"ADMIN\"\n}\n\n// Esse apenas precisa passar o corpo na requisição só existe 1 campo na requisição pasasr a role que quer muda\n// {\n//     \"roles\" : \"ADMIN\"\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permissao/atualiza/USER",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permissao",
+								"atualiza",
+								"USER"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PermissaoListaUm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permissao/listaUm/ADMIN",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permissao",
+								"listaUm",
+								"ADMIN"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PermissaaoListaALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/permissao/listarTodos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"permissao",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Criar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"felipemiehe123\",\n    \"password\": \"felipe123\",\n    \"nome\": \"felipe miehe\",\n    \"email\": \"felipe@email.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/criar",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Todos Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/listarAll",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"listarAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"abrham\",\n    \"password\": \"4669158154895\",\n    \"nome\": \"joseph touro\"    \n}\n\n// PODE USAR QUALQUER BODY COM ESSES REQUISITOS\n// {\n//     \"username\": \"felipemiehe1234\",\n//     \"password\": \"felipe123\",\n//     \"nome\": \"felipe miehe\",\n//     \"email\": \"felipe@email.com\"\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AtualizaUm/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AtualizaUm",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deleteUsuario/596",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteUsuario",
+						"596"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"felipemiehe1234\",\n    \"password\" : \"felipe123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddPermissaoxUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\" : 1,\n    \"permission_id\" : 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AdicionarPermisaoxUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AdicionarPermisaoxUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoverPermisaoxUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\" : 1,\n    \"permission_id\" : 2\n}\n\n\n// Passar o ID da permissao que quer remover e o ID do USUARIO que DESEJA ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/RemoverPermisaoxUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"RemoverPermisaoxUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rota Autorizada JWT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/autorizada",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"autorizada"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Achar Permisoes por ID usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AcharRoles/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AcharRoles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
